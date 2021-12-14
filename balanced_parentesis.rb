@@ -13,6 +13,7 @@ def balacend_parenthesis(string)
 
   stack['('] = 0 if !stack['(']
   stack[')'] = 0 if !stack[')'] 
+  stack[':'] = 0 if !stack[':'] 
   
   return 'balanceado' if stack['('] == stack[')']
 
@@ -20,17 +21,19 @@ def balacend_parenthesis(string)
 
   diff = diff.positive? ? diff : diff * -1
   
-  return 'balanceado' if  diff == stack[':']
+  return 'balanceado' if  diff <= stack[':']
   
   return 'desbalanceado'
 end
 
 
-puts balacend_parenthesis('')
-puts balacend_parenthesis('hola')
-puts balacend_parenthesis('(hola)')
-puts balacend_parenthesis('(()')
-puts balacend_parenthesis('(:()')
-puts balacend_parenthesis(':):)')
-puts balacend_parenthesis(":((" )
-puts balacend_parenthesis("a (b (c (d) c) b) a :)")
+# puts balacend_parenthesis('')
+# puts balacend_parenthesis('hola')
+# puts balacend_parenthesis('(hola)')
+# puts balacend_parenthesis('(()')
+# puts balacend_parenthesis('(:()')
+# puts balacend_parenthesis(':):)')
+# puts balacend_parenthesis(':):)')
+# puts balacend_parenthesis(":((" )
+# puts balacend_parenthesis("a (b (c (d) c) b) a :)")
+# puts balacend_parenthesis('((:):):)')
