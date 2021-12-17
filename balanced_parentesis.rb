@@ -7,8 +7,7 @@
 def balacend_parenthesis(string)
   return 'balanceado' if string.empty?
   new_string =  string.tr('a-zA-Z0-9', '')
-  stack = new_string.split.tally
-
+  stack = new_string.split('').tally
   return 'balanceado' if stack == {}
 
   stack['('] = 0 if !stack['(']
@@ -35,7 +34,6 @@ def balacend_parenthesis(string)
   diff = diff.positive? ? diff : diff * -1
 
   return 'balanceado' if  diff <= stack[':']
-  
   return 'desbalanceado'
 end
 
@@ -45,7 +43,6 @@ end
 # puts balacend_parenthesis('(hola)')
 # puts balacend_parenthesis('(()')
 # puts balacend_parenthesis('(:()')
-# puts balacend_parenthesis(':):)')
 # puts balacend_parenthesis(':):)')
 # puts balacend_parenthesis(":((" )
 # puts balacend_parenthesis("a (b (c (d) c) b) a :)")
