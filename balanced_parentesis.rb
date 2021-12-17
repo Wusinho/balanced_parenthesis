@@ -49,5 +49,5 @@ end
 # puts balacend_parenthesis(':):)')
 # puts balacend_parenthesis(":((" )
 # puts balacend_parenthesis("a (b (c (d) c) b) a :)")
-puts balacend_parenthesis('((:):):)')
+# puts balacend_parenthesis('((:):):)')
 # puts balacend_parenthesis(')))(((')
