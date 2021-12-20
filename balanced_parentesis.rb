@@ -9,7 +9,7 @@ def balacend_parenthesis(string)
   arr =  string.tr('a-zA-Z0-9', '')
   
   return 'balanceado' if arr == ''
-  
+
   counter = 0
   smile = '(:'
   smile2 = ':)'
@@ -63,7 +63,7 @@ end
 # puts balacend_parenthesis(":((" )
 # puts balacend_parenthesis("a (b (c (d) c) b) a :)")
 # puts balacend_parenthesis('((:):):)')
-# puts balacend_parenthesis(':)(:')
+# puts balacend_parenthesis(':)(:') #mi prueba
 # puts balacend_parenthesis('(:::(:)') #mi prueba
 # puts balacend_parenthesis(')))(((')
 # puts balacend_parenthesis(':(:(:())))))')
