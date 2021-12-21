@@ -45,17 +45,17 @@ end
 balanceado = Balanceado.new('((:):):)))')
 puts balanceado.arr
 
-# puts balacend_parenthesis('')
-# puts balacend_parenthesis('hola')
-# puts balacend_parenthesis('(hola)')
-# puts balacend_parenthesis('(()')
-# puts balacend_parenthesis('(:()')
-# puts balacend_parenthesis(':):)')
-# puts balacend_parenthesis(":((" )
-# puts balacend_parenthesis("a (b (c (d) c) b) a :)")
-# puts balacend_parenthesis('((:):):)')
-# puts balacend_parenthesis('((:):):)))')
-# puts balacend_parenthesis(':)(:') #mi prueba
-# puts balacend_parenthesis('(:::(:)') #mi prueba
-# puts balacend_parenthesis(')))(((')
-# puts balacend_parenthesis(':(:(:())))))')
+# puts balacend_parenthesis('') #balanceado
+# puts balacend_parenthesis('hola') #balanceado
+# puts balacend_parenthesis('(hola)') #balanceado
+# puts balacend_parenthesis('(()')  #desbalanceado
+# puts balacend_parenthesis('(:()') #balanceado
+# puts balacend_parenthesis(':):)') #balanceado
+# puts balacend_parenthesis(":((" ) #desbalanceado
+# puts balacend_parenthesis("a (b (c (d) c) b) a :)") #balanceado
+# puts balacend_parenthesis('((:):):)') #balanceado
+# puts balacend_parenthesis(':)(:') #balanceado
+# puts balacend_parenthesis('(:::(:)')  #desbalanceado
+# puts balacend_parenthesis(')))(((') #desbalanceado
+# puts balacend_parenthesis(':(:(:())))))') #desbalanceado
+# puts balacend_parenthesis('((:):):)))') #balanceado
