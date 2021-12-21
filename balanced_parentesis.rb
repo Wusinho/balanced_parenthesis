@@ -4,59 +4,46 @@
 #4. Es un mensaje con paréntesis balanceados seguido de otro mensaje con paréntesis balanceados
 #5. Es un emoticón feliz ":)" o uno triste ":("
 
-def balacend_parenthesis(string)
+class Balanceado
 
-  arr =  string.tr('a-zA-Z0-9', '')
-  
-  return 'balanceado' if arr == ''
+  attr_accessor :string
+  attr_reader   :faces
 
-  counter = 0
-  faces = [':)', ':(']
-  
-  loop do
-
-    close_par =  arr.index(')')
-    dos_puntos = nil
-
-    if arr[close_par - 1] == ':'
-      a
-    end
-
-    open_par = nil
-
-    break unless close_par
-
-    (0..close_par-1).reverse_each do |i|
-      if arr[i] == '('
-        open_par = i
-        break
-      end
-    end
-
-    break if open_par == nil
-    
-    arr.slice!(open_par.to_i..close_par)
-    arr.strip!
-    counter += 1
-
-    return 'balanceado' if arr.empty? 
+  def initialize(string)
+    @string = arr.tr('a-zA-Z0-9', '')
+    @faces = [':)', ':(']
   end
-  
-  return 'desbalanceado' unless arr.include?(':')
 
-  loop do
-    return 'balanceado' if arr.empty? 
+  def checkString
+    test_string = @string
+    counter = 0
+
+    loop do
+
+      do_puntos = test_string.index(':)')
+      close_par =  test_string.index(')')
+      open_par = nil
+      test_string
     
-    if arr[0..1] == faces[0] || arr[0..1] == faces[1]
-      arr.slice!(0..1)
-    else
-      return 'desbalanceado'
+      break unless close_par
+
+
+      counter += 1
+      break if counter == 10
     end
   end
+
+
+  def removefaces
+    
+  end
+
 
 
 end
 
+balanceado = Balanceado.new('((:):):)))')
+puts balanceado.arr
 
 # puts balacend_parenthesis('')
 # puts balacend_parenthesis('hola')
@@ -67,8 +54,8 @@ end
 # puts balacend_parenthesis(":((" )
 # puts balacend_parenthesis("a (b (c (d) c) b) a :)")
 # puts balacend_parenthesis('((:):):)')
+# puts balacend_parenthesis('((:):):)))')
 # puts balacend_parenthesis(':)(:') #mi prueba
 # puts balacend_parenthesis('(:::(:)') #mi prueba
 # puts balacend_parenthesis(')))(((')
 # puts balacend_parenthesis(':(:(:())))))')
-puts balacend_parenthesis('((:):):)))')
