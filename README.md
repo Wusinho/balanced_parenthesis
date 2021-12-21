@@ -15,14 +15,28 @@ Crea un programa que identifique _si existe al menos una forma_ de interpretar l
 
 Ejemplos:
 
-- a. "hola" -> balanceado
-- b. "(hola)" -> balanceado
-- c. "(()" -> desbalanceado
-- d. "(:)" -> balanceado (ej, si consideramos el mensaje como un ":" [regla 2] entre paréntesis [regla 3])
-- e. "no voy (:()" -> balanceado (ej, si consideramos un emoticón triste [regla 5] entre paréntesis [regla 3])
-- f. "hoy pm: fiesta :):)" -> balanceado
-- g. ":((" -> desbalanceado
-- h. "a (b (c (d) c) b) a :)" -> balanceado (ej, si el último paréntesis es en realidad un emoticón)
+- "hola" -> balanceado
+- "(hola)" -> balanceado
+- "(()" -> desbalanceado
+- "(:)" -> balanceado (ej, si consideramos el mensaje como un ":" [regla 2] entre paréntesis [regla 3])
+- "no voy (:()" -> balanceado (ej, si consideramos un emoticón triste [regla 5] entre paréntesis [regla 3])
+- "hoy pm: fiesta :):)" -> balanceado
+- ":((" -> desbalanceado
+- "a (b (c (d) c) b) a :)" -> balanceado (ej, si el último paréntesis es en realidad un emoticón)
+- "" #balanceado
+- "hola" #balanceado
+- "(hola)" #balanceado
+- "(()" #desbalanceado
+- "(:()" #balanceado
+- ":):)" #balanceado
+- ":((" #desbalanceado
+- "a (b (c (d) c) b) a :)" #balanceado
+- "((:):):)" #balanceado
+- ":)(:" #balanceado
+- "(:::(:)" #desbalanceado
+- ")))(((" #desbalanceado
+- ":(:(:())))))" #desbalanceado
+- "((:):):)))" #balanceado
 
 Una vez que tengas el desafío listo, mándame un link a un repo con el código y sube el programa a alguna plataforma (Heroku, AWS, GCP o similar) para revisarlo funcionando. Te pido que por favor no menciones a AgendaPro en el código, puesto que hay otros candidatos haciendo el mismo challenge.
 
