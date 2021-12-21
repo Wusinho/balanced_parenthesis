@@ -7,57 +7,62 @@
 def balacend_parenthesis(string)
 
   arr =  string.tr('a-zA-Z0-9', '')
-  
+  arr2 = string.tr('a-zA-Z0-9', '')
   return 'balanceado' if arr == ''
-
   counter = 0
   faces = [':)', ':(']
   
+  no_faces = removeFace(arr)
+
+  answer1 = checkString(no_faces)
+  answer2 = checkString(arr2)
+  
+  check_asnwer(answer1, answer2)
+
+end
+
+def checkString(str)
   loop do
-
-    close_par =  arr.index(')')
+    close_par =  str.index(')')
     dos_puntos = nil
-
-    if arr[close_par - 1] == ':'
-      a
-    end
 
     open_par = nil
 
-    break unless close_par
+    return str unless close_par
 
     (0..close_par-1).reverse_each do |i|
-      if arr[i] == '('
+      if str[i] == '('
         open_par = i
         break
       end
     end
 
-    break if open_par == nil
+    return str if open_par == nil
     
-    arr.slice!(open_par.to_i..close_par)
-    arr.strip!
-    counter += 1
+    str.slice!(open_par.to_i..close_par)
+    str.strip!
 
-    return 'balanceado' if arr.empty? 
+    return str if str.empty? 
   end
-  
-  return 'desbalanceado' unless arr.include?(':')
-
-  loop do
-    return 'balanceado' if arr.empty? 
-    
-    if arr[0..1] == faces[0] || arr[0..1] == faces[1]
-      arr.slice!(0..1)
-    else
-      return 'desbalanceado'
-    end
-  end
-
-
 end
 
+def removeFace(str)
+  while str.index(':(') || str.index(':)')
+    index1 = str.index(':(')
+    index2 = str.index(':)')
 
+    str.slice!(index1..index1+1) if index1
+    str.slice!(index2..index2+1) if index2
+  end
+  str
+end
+
+def check_asnwer(arr1,arr2)
+  ans1 = removeFace(arr1)
+  ans2 = removeFace(arr2)
+  return 'balanceado' if ans1.empty? || ans2.empty?
+  return 'desbalanceado'
+end
 # puts balacend_parenthesis('')
 # puts balacend_parenthesis('hola')
 # puts balacend_parenthesis('(hola)')
