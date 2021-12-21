@@ -11,13 +11,17 @@ def balacend_parenthesis(string)
   return 'balanceado' if arr == ''
 
   counter = 0
-  smile = '(:'
-  smile2 = ':)'
-  sad = ':('
+  faces = [':)', ':(']
   
   loop do
 
     close_par =  arr.index(')')
+    dos_puntos = nil
+
+    if arr[close_par - 1] == ':'
+      a
+    end
+
     open_par = nil
 
     break unless close_par
@@ -43,7 +47,7 @@ def balacend_parenthesis(string)
   loop do
     return 'balanceado' if arr.empty? 
     
-    if arr[0..1] == smile || arr[0..1] == sad || arr[0..1] == smile2
+    if arr[0..1] == faces[0] || arr[0..1] == faces[1]
       arr.slice!(0..1)
     else
       return 'desbalanceado'
@@ -67,4 +71,4 @@ end
 # puts balacend_parenthesis('(:::(:)') #mi prueba
 # puts balacend_parenthesis(')))(((')
 # puts balacend_parenthesis(':(:(:())))))')
-balacend_parenthesis('((:):):)))')
+puts balacend_parenthesis('((:):):)))')
