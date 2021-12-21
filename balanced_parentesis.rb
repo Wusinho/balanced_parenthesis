@@ -6,29 +6,6 @@
 
 # class Balanceado
 
-<<<<<<< HEAD
-#   attr_accessor :string
-#   attr_reader   :faces
-
-#   def initialize(string)
-#     @string = string.tr('a-zA-Z0-9', '').split('')
-#     @faces = [':)', ':(']
-#     @open_par = 0
-#     @closed_par = 0
-#   end
-
-#   def checkString
-#     test_string = @string
-    
-#     test_string.each do |ele|
-
-#       @open_par += 1 if ele == '('
-       
-#       break if ele != '('
-
-#     end
-#     puts @open_par
-=======
   arr =  string.tr('a-zA-Z0-9', '')
   arr2 = string.tr('a-zA-Z0-9', '')
   return 'balanceado' if arr == ''
@@ -48,47 +25,9 @@ def checkString(str)
   loop do
     close_par =  str.index(')')
     dos_puntos = nil
->>>>>>> Old-aproach
 
 #   end
 
-<<<<<<< HEAD
-
-#   def removefaces(str)
-#     loop do
-
-#       do_puntos = test_string.index(':)')
-#       close_par =  test_string.index(')')
-#       open_par = nil
-#       test_string
-    
-#       break unless close_par
-
-
-#       counter += 1
-#       break if counter == 10
-#     end
-#   end
-
-
-
-# end
-
-# balanceado = Balanceado.new('((:):):)))')
-# balanceado.checkString
-
-
-def balacend_parenthesis(string)
-  arr = string.tr('a-zA-Z0-9', '').split('')
-
-  counter = 0
-
-
-  loop do
-
-
-    
-=======
     return str unless close_par
 
     (0..close_par-1).reverse_each do |i|
@@ -106,47 +45,12 @@ def balacend_parenthesis(string)
     return str if str.empty? 
   end
 end
->>>>>>> Old-aproach
 
 def removeFace(str)
   while str.index(':(') || str.index(':)')
     index1 = str.index(':(')
     index2 = str.index(':)')
 
-<<<<<<< HEAD
-
-
-
-
-
-    p counter
-    counter +=1 
-
-    break if counter == 10
-  end
-
-end
-
-
-
-
-# puts balacend_parenthesis('((:):):)') #balanceado
-# puts balacend_parenthesis('((:):):)))') #balanceado
-
-# puts balacend_parenthesis('') #balanceado
-# puts balacend_parenthesis('hola') #balanceado
-# puts balacend_parenthesis('(hola)') #balanceado
-# puts balacend_parenthesis('(()')  #desbalanceado
-# puts balacend_parenthesis('(:()') #balanceado
-# puts balacend_parenthesis(':):)') #balanceado
-# puts balacend_parenthesis(":((" ) #desbalanceado
-# puts balacend_parenthesis("a (b (c (d) c) b) a :)") #balanceado
-# puts balacend_parenthesis(':)(:') #balanceado
-# puts balacend_parenthesis('(:::(:)')  #desbalanceado
-# puts balacend_parenthesis(')))(((') #desbalanceado
-# puts balacend_parenthesis(':(:(:())))))') #desbalanceado
-# puts balacend_parenthesis('((:):):)))') #balanceado
-=======
     str.slice!(index1..index1+1) if index1
     str.slice!(index2..index2+1) if index2
   end
@@ -173,4 +77,3 @@ end
 # puts balacend_parenthesis(')))(((')
 # puts balacend_parenthesis(':(:(:())))))')
 puts balacend_parenthesis('((:):):)))')
->>>>>>> Old-aproach
