@@ -6,6 +6,7 @@
 
 # class Balanceado
 
+<<<<<<< HEAD
 #   attr_accessor :string
 #   attr_reader   :faces
 
@@ -27,9 +28,31 @@
 
 #     end
 #     puts @open_par
+=======
+  arr =  string.tr('a-zA-Z0-9', '')
+  arr2 = string.tr('a-zA-Z0-9', '')
+  return 'balanceado' if arr == ''
+  counter = 0
+  faces = [':)', ':(']
+  
+  no_faces = removeFace(arr)
+
+  answer1 = checkString(no_faces)
+  answer2 = checkString(arr2)
+  
+  check_asnwer(answer1, answer2)
+
+end
+
+def checkString(str)
+  loop do
+    close_par =  str.index(')')
+    dos_puntos = nil
+>>>>>>> Old-aproach
 
 #   end
 
+<<<<<<< HEAD
 
 #   def removefaces(str)
 #     loop do
@@ -65,8 +88,32 @@ def balacend_parenthesis(string)
 
 
     
+=======
+    return str unless close_par
 
+    (0..close_par-1).reverse_each do |i|
+      if str[i] == '('
+        open_par = i
+        break
+      end
+    end
 
+    return str if open_par == nil
+    
+    str.slice!(open_par.to_i..close_par)
+    str.strip!
+
+    return str if str.empty? 
+  end
+end
+>>>>>>> Old-aproach
+
+def removeFace(str)
+  while str.index(':(') || str.index(':)')
+    index1 = str.index(':(')
+    index2 = str.index(':)')
+
+<<<<<<< HEAD
 
 
 
@@ -99,3 +146,31 @@ end
 # puts balacend_parenthesis(')))(((') #desbalanceado
 # puts balacend_parenthesis(':(:(:())))))') #desbalanceado
 # puts balacend_parenthesis('((:):):)))') #balanceado
+=======
+    str.slice!(index1..index1+1) if index1
+    str.slice!(index2..index2+1) if index2
+  end
+  str
+end
+
+def check_asnwer(arr1,arr2)
+  ans1 = removeFace(arr1)
+  ans2 = removeFace(arr2)
+  return 'balanceado' if ans1.empty? || ans2.empty?
+  return 'desbalanceado'
+end
+# puts balacend_parenthesis('')
+# puts balacend_parenthesis('hola')
+# puts balacend_parenthesis('(hola)')
+# puts balacend_parenthesis('(()')
+# puts balacend_parenthesis('(:()')
+# puts balacend_parenthesis(':):)')
+# puts balacend_parenthesis(":((" )
+# puts balacend_parenthesis("a (b (c (d) c) b) a :)")
+# puts balacend_parenthesis('((:):):)')
+# puts balacend_parenthesis(':)(:') #mi prueba
+# puts balacend_parenthesis('(:::(:)') #mi prueba
+# puts balacend_parenthesis(')))(((')
+# puts balacend_parenthesis(':(:(:())))))')
+puts balacend_parenthesis('((:):):)))')
+>>>>>>> Old-aproach
