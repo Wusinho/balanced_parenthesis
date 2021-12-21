@@ -67,3 +67,4 @@ end
 # puts balacend_parenthesis('(:::(:)') #mi prueba
 # puts balacend_parenthesis(')))(((')
 # puts balacend_parenthesis(':(:(:())))))')
+balacend_parenthesis('((:):):)))')
