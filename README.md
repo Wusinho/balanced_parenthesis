@@ -32,7 +32,7 @@ Ejemplos:
 - ":((" #desbalanceado
 - "a (b (c (d) c) b) a :)" #balanceado
 - "((:):):)" #balanceado
-- ":)(:" #balanceado
+- ":)(:" #desbalanceado
 - "(:::(:)" #desbalanceado
 - ")))(((" #desbalanceado
 - ":(:(:())))))" #desbalanceado
