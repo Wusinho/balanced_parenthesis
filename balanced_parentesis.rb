@@ -4,7 +4,7 @@
 #4. Es un mensaje con paréntesis balanceados seguido de otro mensaje con paréntesis balanceados
 #5. Es un emoticón feliz ":)" o uno triste ":("
 
-# class Balanceado
+def balacend_parenthesis(string)
 
   arr =  string.tr('a-zA-Z0-9', '')
   arr2 = string.tr('a-zA-Z0-9', '')
@@ -26,7 +26,7 @@ def checkString(str)
     close_par =  str.index(')')
     dos_puntos = nil
 
-#   end
+    open_par = nil
 
     return str unless close_par
 
